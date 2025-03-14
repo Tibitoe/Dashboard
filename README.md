@@ -17,11 +17,15 @@ Installation och körning
 
     Klona repo från GitHub
 
-git clone cd nuggetdashboard
+git clone https://github.com/Tibitoe/Dashboard.git
 
     Installera beroenden
 
 npm install
+
+    Välj mapp
+
+cd nuggetdashboard
 
     Starta utvecklingsservern
 
