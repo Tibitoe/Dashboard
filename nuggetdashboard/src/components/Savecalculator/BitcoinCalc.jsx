@@ -1,11 +1,7 @@
 import BitCoinCalcForm from "./BitcoinCalcForm";
 
 function BitCoinCalc() {
-    return ( 
-        <div>
-            <BitCoinCalcForm/>
-        </div>
-     );
+  return <BitCoinCalcForm />;
 }
 
 export default BitCoinCalc;

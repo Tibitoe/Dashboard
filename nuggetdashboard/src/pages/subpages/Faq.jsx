@@ -3,7 +3,7 @@ function Faq() {
     <>
       <h3>FAQ</h3>
       <h4>
-        Q: I invested my lifesavings on cryptocurrencies, now it's all gone!
+        Q: I invested my lifesavings in cryptocurrencies, now it's all gone!
         What can I do?
       </h4>
       <p className="font-bold">A: Just git gud.</p>

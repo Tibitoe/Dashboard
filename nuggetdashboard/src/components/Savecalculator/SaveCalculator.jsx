@@ -1,11 +1,7 @@
 import SaveCalcForm from "./IndexCalcForm";
 
 function SavingCalculator() {
-  return (
-    <div>
-      <SaveCalcForm />
-    </div>
-  );
+  return <SaveCalcForm />;
 }
 
 export default SavingCalculator;

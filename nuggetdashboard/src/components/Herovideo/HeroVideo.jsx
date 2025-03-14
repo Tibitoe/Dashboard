@@ -1,4 +1,3 @@
-import React from "react";
 import DecryptedText from "../DecryptedText";
 
 const HeroVideo = () => {

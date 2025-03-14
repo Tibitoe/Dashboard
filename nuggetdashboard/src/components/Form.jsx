@@ -10,16 +10,18 @@ function FormComponent() {
           className="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          required
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="exampleFormControlTextarea1" className="form-label">
+        <label htmlFor="messageText" className="form-label">
           Message
         </label>
         <textarea
           className="form-control"
-          id="exampleFormControlTextarea1"
+          id="messageText"
           placeholder="Your message"
+          required
           rows="3"
         ></textarea>
       </div>
