@@ -4,8 +4,8 @@ import { bitcoinGrowth } from "../../store/bitcoinSlice";
 
 function BitCoinCalcForm() {
   const dispatch = useDispatch();
-  const [startAmount, setStartAmount] = useState(10000);
-  const [monthlyDeposit, setMonthlyDeposit] = useState(1000);
+  const [startAmount, setStartAmount] = useState(0);
+  const [monthlyDeposit, setMonthlyDeposit] = useState(100);
   const [years, setYears] = useState(1);
   const annualReturn = 30;
   const calculateFutureValue = (
@@ -96,8 +96,7 @@ function BitCoinCalcForm() {
         </div>
       </form>
       <p className="text-xs text-gray-500 mt-4">
-        *We have calculated that you will get an anual increase of 100 % per
-        year.
+        *We have calculated that you will get an anual increase of 30% per year.
       </p>
     </div>
   );

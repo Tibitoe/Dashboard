@@ -4,8 +4,8 @@ import { indexGrowth } from "../../store/indexSlice";
 
 function SaveCalcForm() {
   const dispatch = useDispatch();
-  const [startAmount, setStartAmount] = useState(10000);
-  const [monthlyDeposit, setMonthlyDeposit] = useState(1000);
+  const [startAmount, setStartAmount] = useState(0);
+  const [monthlyDeposit, setMonthlyDeposit] = useState(100);
   const [years, setYears] = useState(1);
   const annualReturn = 7;
   const calculateFutureValue = (
