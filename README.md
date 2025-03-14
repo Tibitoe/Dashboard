@@ -1,5 +1,5 @@
-#Bitcoin Bros
-##Projektbeskrivning
+# Bitcoin Bros
+## Projektbeskrivning
 
 Det här projektet är en React-applikation byggd med Vite. Det använder Tailwind CSS och Bootstrap för styling samt Redux för state management. Applikationen har en modern design och responsivt gränssnitt, och hanterar global state effektivt med Redux.
 Teknikval
@@ -13,7 +13,7 @@ Tailwind CSS – Utility-first CSS-ramverk för styling
 Bootstrap – Komponentbaserat CSS-ramverk för ytterligare styling
 
 Redux – Hantering av global state
-##Installation och körning
+## Installation och körning
 
 Klona repo från GitHub
 
@@ -33,7 +33,7 @@ Starta utvecklingsservern
 
 Applikationen körs nu på http://localhost:5173/.
 
-##Funktioner
+## Funktioner
 
 Responsiv design med Tailwind CSS & Bootstrap State management med Redux Snabb utveckling med Vite Modulär och komponentbaserad struktur
 Licens
