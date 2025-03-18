@@ -4,10 +4,10 @@ const HeroVideo = () => {
   return (
     <div className="relative overflow-hidden">
       <video className="w-full h-auto" autoPlay loop muted>
-        <source src="./MyVideo.mp4" type="video/mp4" />
+        <source src="/MyVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white text-center">
+      <div className="absolute inset-0 flex flex-col justify-center items-center bg-black opacity-60 text-white text-center">
         <h1 className="text-7xl font-bold font-sans">
           <DecryptedText
             text="BITCOIN BROS!"
@@ -15,12 +15,12 @@ const HeroVideo = () => {
             maxIterations={15}
             sequential={true}
             revealDirection="center"
-            className="sm:text-8xl font-bold"
+            className="sm:text-8xl font-bold opacity-100"
             encryptedClassName="text-xl"
             animateOn="view"
           />
         </h1>
-        <p className="mt-4 sm:text-4xl">
+        <p className="mt-4 sm:text-4xl opacity-100">
           <DecryptedText
             text="To the moooooon!"
             speed={100}
