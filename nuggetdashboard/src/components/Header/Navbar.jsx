@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // Ikoner för hamburgarmenyn
+import DarkModeBtn from "../DarkmodeBtn";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-800">
+      <nav className="bg-gray-800 sm:flex place-content-end">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-12">
             {/* Logotyp */}
@@ -117,6 +118,7 @@ const Navbar = () => {
             </div>
           </div>
         )}
+        <DarkModeBtn />
       </nav>
     </>
   );
