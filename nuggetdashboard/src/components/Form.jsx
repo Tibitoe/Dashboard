@@ -27,7 +27,7 @@ function FormComponent() {
       </div>
       <button
         style={{ borderRadius: "8px" }}
-        className="text-white bg-blue-900 p-2 hover:bg-blue-600"
+        className="text-white bg-gray-800 p-2 hover:bg-gray-700 border-2 hover:border-amber-300"
       >
         Submit
       </button>

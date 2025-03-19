@@ -73,8 +73,10 @@ const Navbar = () => {
                       key={name}
                       to={path}
                       className={({ isActive }) =>
-                        `text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
-                          isActive ? "bg-gray-700 text-white" : ""
+                        `text-gray-200 hover:bg-gray-700 hover:text-white border-2 border-gray-800 hover:border-amber-300 px-3 py-2 rounded-md text-sm font-medium ${
+                          isActive
+                            ? "!bg-gray-700 !text-white !border-amber-300"
+                            : ""
                         }`
                       }
                     >
@@ -107,7 +109,9 @@ const Navbar = () => {
                   to={path}
                   className={({ isActive }) =>
                     `text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
-                      isActive ? "bg-gray-700 text-white" : ""
+                      isActive
+                        ? "!bg-gray-700 !text-white !border-amber-300"
+                        : ""
                     }`
                   }
                   onClick={() => setIsOpen(false)}
