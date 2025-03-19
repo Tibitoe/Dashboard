@@ -33,16 +33,16 @@ function SaveCalcForm({ annualReturn, title }) {
   dispatch(indexGrowth(Math.round(indexFutureValue)));
 
   return (
-    <div className="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center mt-5 mb-5">
+    <div className="max-w-lg mx-auto bg-gray-200 dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 text-center mt-5 mb-5">
       <div className="flex justify-center items-center mb-4">
-        <div className="text-gray-800 text-lg font-bold px-4 py-2 rounded-lg">
+        <div className="text-gray-800 dark:text-gray-200 text-lg font-bold px-4 py-2 rounded-lg">
           {title}
         </div>
       </div>
-      <h5 className="text-3xl font-bold text-green-600">
+      <h5 className="text-3xl font-bold text-green-600 dark:text-green-400">
         ${Math.round(indexFutureValue).toLocaleString()}
       </h5>
-      <p className="text-gray-500 text-sm mb-4">
+      <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
         Of which $
         {Math.round(
           indexFutureValue - (startAmount + monthlyDeposit * years * 12)
@@ -51,8 +51,8 @@ function SaveCalcForm({ annualReturn, title }) {
       </p>
 
       <form className="space-y-4 mt-4">
-        <div className="bg-gray-100 p-3 rounded-lg">
-          <label className="text-sm font-medium text-gray-700">
+        <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Monthly Saving: ${monthlyDeposit}
           </label>
           <input
@@ -62,11 +62,11 @@ function SaveCalcForm({ annualReturn, title }) {
             step="50"
             value={monthlyDeposit}
             onChange={(e) => setMonthlyDeposit(Number(e.target.value))}
-            className="w-full mt-2"
+            className="w-full mt-2 accent-green-600 dark:accent-green-400"
           />
         </div>
-        <div className="bg-gray-100 p-3 rounded-lg">
-          <label className="text-sm font-medium text-gray-700">
+        <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Starting Amount: ${startAmount}
           </label>
           <input
@@ -76,11 +76,11 @@ function SaveCalcForm({ annualReturn, title }) {
             step="500"
             value={startAmount}
             onChange={(e) => setStartAmount(Number(e.target.value))}
-            className="w-full mt-2"
+            className="w-full mt-2 accent-green-600 dark:accent-green-400"
           />
         </div>
-        <div className="bg-gray-100 p-3 rounded-lg">
-          <label className="text-sm font-medium text-gray-700">
+        <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
             Saving Time: {years} Years
           </label>
           <input
@@ -90,11 +90,11 @@ function SaveCalcForm({ annualReturn, title }) {
             step="1"
             value={years}
             onChange={(e) => setYears(Number(e.target.value))}
-            className="w-full mt-2"
+            className="w-full mt-2 accent-green-600 dark:accent-green-400"
           />
         </div>
       </form>
-      <p className="text-xs text-gray-500 mt-4">
+      <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
         *This is calculated based on an annual increase of {annualReturn}%.
       </p>
     </div>

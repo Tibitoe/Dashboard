@@ -2,12 +2,12 @@ import SaveCalcForm from "../components/Savecalculator/SavingsCalculator";
 
 function SavingsPage() {
   return (
-    <section className="grid gap-5 justify-items-center text-center p-5">
+    <section className="grid gap-5 justify-items-center text-center p-5 dark:bg-gray-900 dark:text-gray-300">
       <div className="max-w-lg">
-        <h2 className="font-extrabold text-3xl">Savings comparison</h2>
-        <p className="text-gray-900">
+        <h2 className="font-bold text-gray-900 text-2xl">Savings comparison</h2>
+        <p className="text-gray-900 dark:text-gray-300">
           Here you can compare and see how much of an annual return you will get
-          when saving Index or Bitcoin.
+          when saving in Index versus Bitcoin.
         </p>
       </div>
 
