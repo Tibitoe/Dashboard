@@ -53,18 +53,18 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-800 sm:flex place-content-end">
+        {/* Logotyp */}
+        <div className="flex items-center w-fit max-sm:hidden">
+          <NavLink to="/">
+            <img
+              src="/bitcoin-btc-logo.png"
+              alt="Logo"
+              className="h-10 w-auto ml-1"
+            />
+          </NavLink>
+        </div>
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-12">
-            {/* Logotyp */}
-            <div className="flex items-center">
-              <NavLink to="/">
-                <img
-                  src="/bitcoin-btc-logo.png"
-                  alt="Logo"
-                  className="h-10 w-auto"
-                />
-              </NavLink>
-            </div>
             <div className="flex-1 flex items-center justify-start sm:items-stretch">
               <div className="hidden sm:block sm:ml-6">
                 <div className="flex gap-5 ">
