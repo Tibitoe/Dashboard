@@ -1,11 +1,5 @@
-import BitCoinCalc from "../components/Savecalculator/BitcoinCalc";
-
 function ProductPage() {
-  return (
-    <div>
-      <BitCoinCalc />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default ProductPage;

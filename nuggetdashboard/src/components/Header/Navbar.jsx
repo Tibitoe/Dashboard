@@ -44,8 +44,8 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Bitcoin Calculator", path: "/products" },
-    { name: "Index Calculator", path: "/calc" },
+    { name: "Dashboard", path: "/products" },
+    { name: "Savings Calculator", path: "/calc" },
     { name: "About us", path: "/about" },
   ];
 

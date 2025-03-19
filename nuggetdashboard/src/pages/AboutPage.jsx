@@ -3,7 +3,7 @@ import HelpLayout from "../routing/HelpLayout";
 function AboutPage() {
   return (
     <div className="text-center justify-center mt-4">
-      <h2>About us</h2>
+      <h2 className="font-bold text-3xl">About us</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
         pariatur.

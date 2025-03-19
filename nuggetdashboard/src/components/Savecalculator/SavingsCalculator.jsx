@@ -2,12 +2,12 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { indexGrowth } from "../../store/indexSlice";
 
-function SaveCalcForm() {
+function SaveCalcForm({ annualReturn, title }) {
   const dispatch = useDispatch();
   const [startAmount, setStartAmount] = useState(0);
   const [monthlyDeposit, setMonthlyDeposit] = useState(100);
   const [years, setYears] = useState(1);
-  const annualReturn = 7;
+
   const calculateFutureValue = (
     startAmount,
     monthlyDeposit,
@@ -35,12 +35,11 @@ function SaveCalcForm() {
   return (
     <div className="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center mt-5 mb-5">
       <div className="flex justify-center items-center mb-4">
-        <div className=" text-gray-800 text-lg font-bold px-4 py-2 rounded-lg">
-          Test our savings calculator
+        <div className="text-gray-800 text-lg font-bold px-4 py-2 rounded-lg">
+          {title}
         </div>
       </div>
       <h5 className="text-3xl font-bold text-green-600">
-        {" "}
         ${Math.round(indexFutureValue).toLocaleString()}
       </h5>
       <p className="text-gray-500 text-sm mb-4">
@@ -96,7 +95,7 @@ function SaveCalcForm() {
         </div>
       </form>
       <p className="text-xs text-gray-500 mt-4">
-        *We have calculated that you will get an annual increase of 7% per year.
+        *This is calculated based on an annual increase of {annualReturn}%.
       </p>
     </div>
   );
