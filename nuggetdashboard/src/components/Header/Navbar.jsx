@@ -52,9 +52,18 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-800">
-        <h1 className="bg-gray-800 text-white font-bold m-5">Bitcoin Bros</h1>
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-12">
+            {/* Logotyp */}
+            <div className="flex items-center">
+              <NavLink to="/">
+                <img
+                  src="/bitcoin-btc-logo.png"
+                  alt="Logo"
+                  className="h-10 w-auto"
+                />
+              </NavLink>
+            </div>
             <div className="flex-1 flex items-center justify-start sm:items-stretch">
               <div className="hidden sm:block sm:ml-6">
                 <div className="flex gap-5 ">
