@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import RootLayout from "./RootLayout";
 import HomePage from "../pages/Homepage";
-import ProductPage from "../pages/ProductsPage";
+import Dashboard from "../pages/Dashboard";
 import SavingsPage from "../pages/SavingsPage";
 import AboutPage from "../pages/AboutPage";
 import Faq from "../pages/subpages/Faq";
@@ -16,7 +16,7 @@ const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<HomePage />} />
-      <Route path="products" element={<ProductPage />} />
+      <Route path="dashboard" element={<Dashboard />} />
       <Route path="calc" element={<SavingsPage />} />
       <Route path="about" element={<AboutPage />}>
         <Route path="faq" element={<Faq />} />
