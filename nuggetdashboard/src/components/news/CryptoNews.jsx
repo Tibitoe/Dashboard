@@ -12,7 +12,7 @@ const CryptoNews = () => {
     async function fetchNews() {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${API_KEY}`
+          `https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${API_KEY}&pageSize=15`
         );
         setNews(response.data.articles);
         setLoading(false);

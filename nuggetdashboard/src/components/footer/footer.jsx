@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-300 dark:bg-gray-950 text-gray-700 dark:text-gray-300 py-8">
+    <footer className="bg-gray-400 dark:bg-gray-950 text-gray-800 dark:text-gray-300 py-8">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export default function Footer() {
           <p>📞 +1-800-BTC-MOON</p>
         </div>
 
-        <div className="text-center mt-4 text-xs text-gray-500 dark:text-gray-400">
+        <div className="text-center mt-4 text-xs text-gray-700 dark:text-gray-300">
           &copy; {new Date().getFullYear()} Bitcoin Bros. All rights reserved.
         </div>
       </div>

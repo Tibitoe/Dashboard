@@ -107,7 +107,7 @@ const Navbar = () => {
                   key={name}
                   to={path}
                   className={({ isActive }) =>
-                    `text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
+                    `text-gray-9  00 hover:bg-gray-700 hover:text-white block px-3 py-4  rounded-md text-base font-medium ${
                       isActive
                         ? "!bg-gray-700 !text-white !border-amber-300"
                         : ""
