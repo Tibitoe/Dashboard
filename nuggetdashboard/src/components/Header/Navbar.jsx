@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Ikoner för hamburgarmenyn
+import { Menu, X } from "lucide-react";
 import DarkModeBtn from "../DarkmodeBtn";
 
 const Navbar = () => {
@@ -53,7 +53,6 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-800 sm:flex place-content-end">
-        {/* Logotyp */}
         <div className="flex items-center w-fit max-sm:hidden">
           <NavLink to="/">
             <img
