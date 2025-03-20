@@ -54,7 +54,7 @@ const Navbar = () => {
     <>
       <nav className="bg-gray-300 dark:bg-gray-800 sm:flex place-content-end">
         <div className="flex items-center w-fit max-sm:hidden">
-          <NavLink to="/">
+          <NavLink to="/" tabIndex="-1">
             <img
               src="/bitcoin-btc-logo.png"
               alt="Logo"
