@@ -24,7 +24,7 @@ export default function Footer() {
               Home
             </NavLink>
             <NavLink
-              to="/products"
+              to="/dashboard"
               className="hover:text-gray-900 dark:hover:text-white hover:underline decoration-amber-300 underline-offset-6"
             >
               Dashboard
