@@ -52,7 +52,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-800 sm:flex place-content-end">
+      <nav className="bg-gray-300 dark:bg-gray-800 sm:flex place-content-end">
         <div className="flex items-center w-fit max-sm:hidden">
           <NavLink to="/">
             <img
@@ -72,7 +72,7 @@ const Navbar = () => {
                       key={name}
                       to={path}
                       className={({ isActive }) =>
-                        `text-gray-200 hover:bg-gray-700 hover:text-white border-2 border-gray-800 hover:border-amber-300 px-3 py-2 rounded-md text-sm font-medium ${
+                        `text-gray-900 hover:bg-gray-700 hover:text-white border-2 border-gray-300 dark:text-gray-200 dark:border-gray-800 hover:border-amber-300 px-3 py-2 rounded-md text-sm font-medium ${
                           isActive
                             ? "!bg-gray-700 !text-white !border-amber-300"
                             : ""

@@ -45,7 +45,7 @@ const BitcoinPriceChart = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+    <div className="bg-gray-200 dark:bg-gray-800 p-6 m-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
         Bitcoin Price History (Last 365 Days)
       </h2>
