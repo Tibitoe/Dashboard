@@ -72,10 +72,8 @@ const Navbar = () => {
                       key={name}
                       to={path}
                       className={({ isActive }) =>
-                        `text-gray-900 hover:bg-gray-700 hover:text-white border-2 border-gray-300 dark:text-gray-200 dark:border-gray-800 hover:border-amber-300 px-3 py-2 rounded-md text-sm font-medium ${
-                          isActive
-                            ? "!bg-gray-700 !text-white !border-amber-300"
-                            : ""
+                        `text-gray-900 hover:bg-gray-700 hover:text-white dark:text-gray-200 hover:underline underline-offset-4 decoration-amber-300 decoration-2 px-3 py-2 rounded-md text-sm font-medium ${
+                          isActive ? "!bg-gray-700 !text-white !underline" : ""
                         }`
                       }
                     >
