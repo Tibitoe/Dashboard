@@ -18,7 +18,7 @@ function DarkModeBtn() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="bg-gray-800 dark:text-white p-3 mr-1 max-sm:hidden rounded-full hover:bg-gray-600 transition"
+      className="bg-gray-300 dark:bg-gray-800 dark:text-white p-3 mr-1 max-sm:hidden rounded-full hover:bg-gray-600 transition"
     >
       {darkMode ? "☀️" : "🌙"}
     </button>
