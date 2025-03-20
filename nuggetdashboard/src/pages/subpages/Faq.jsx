@@ -35,7 +35,7 @@ function Faq() {
 
   return (
     <div className="max-w-2xl mx-auto mt-4 mb-4 p-6 bg-gray-200 dark:bg-gray-800 shadow-lg rounded-2xl border border-gray-200 dark:border-gray-700">
-      <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
         FAQ - Bitcoin Bros
       </h3>
 
@@ -46,7 +46,7 @@ function Faq() {
             className="border-b border-gray-300 dark:border-gray-600"
           >
             <button
-              className="w-full text-left flex justify-between items-center py-4 text-xl font-semibold text-gray-800 dark:text-gray-200 focus:outline-none"
+              className="w-full text-left flex justify-between items-center py-4 text-xl font-semibold text-gray-800 dark:text-gray-200 focus:outline-2 p-1"
               onClick={() => toggleQuestion(index)}
             >
               {item.question}
