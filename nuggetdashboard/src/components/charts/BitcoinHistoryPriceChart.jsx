@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchBitcoinHistory } from "../../store/cryptoSlice";
 import {
   LineChart,
   Line,
@@ -9,48 +11,38 @@ import {
 } from "recharts";
 
 const BitcoinPriceChart = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const dispatch = useDispatch();
+  const { bitcoinHistory, loading, error } = useSelector(
+    (state) => state.crypto
+  );
 
+  const [selectedPeriod, setSelectedPeriod] = useState("365");
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(
-          "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=365&interval=daily"
-        );
-
-        if (!response.ok) {
-          throw new Error(`Fel: ${response.status}`);
-        }
-
-        const result = await response.json();
-
-        const formattedData = result.prices.map((entry) => ({
-          date: new Date(entry[0]).toLocaleDateString(),
-          price: parseFloat(entry[1].toFixed(1)),
-        }));
-
-        setData(formattedData);
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
+    dispatch(fetchBitcoinHistory(selectedPeriod));
+  }, [dispatch, selectedPeriod]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="bg-gray-200 dark:bg-gray-800 p-6 m-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
-        Bitcoin Price History (Last 365 Days)
-      </h2>
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200">
+          Bitcoin Price History
+        </h2>
+        <select
+          value={selectedPeriod}
+          onChange={(e) => setSelectedPeriod(e.target.value)}
+          className="p-2 rounded bg-white dark:bg-gray-700 border dark:border-gray-600 text-gray-900 dark:text-gray-200"
+        >
+          <option value="1">24 Hours</option>
+          <option value="30">1 Month</option>
+          <option value="365">1 Year</option>
+        </select>
+      </div>
+
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={data}>
+        <LineChart data={bitcoinHistory}>
           <XAxis dataKey="date" tick={{ fill: "#888" }} />
           <YAxis
             domain={["auto", "auto"]}
