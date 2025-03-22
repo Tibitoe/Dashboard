@@ -3,7 +3,7 @@ import CryptoNews from "../components/news/CryptoNews";
 
 function HomePage() {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <HeroVideo />
       <CryptoNews />
     </div>

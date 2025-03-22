@@ -22,10 +22,14 @@ const BitcoinPriceChart = () => {
   }, [dispatch, selectedPeriod]);
 
   if (loading)
-    return <p className="text-gray-900 dark:text-gray-200">Loading...</p>;
+    return (
+      <p className="text-gray-900 dark:text-gray-200 text-center text-3xl">
+        Loading...
+      </p>
+    );
   if (error)
     return (
-      <p className="text-gray-900 dark:text-gray-200">
+      <p className="text-gray-900 dark:text-gray-200 text-center text-3xl">
         Error loading chart: {error}
       </p>
     );

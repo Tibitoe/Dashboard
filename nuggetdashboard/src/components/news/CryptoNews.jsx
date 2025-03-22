@@ -14,7 +14,10 @@ const CryptoNews = () => {
         const response = await axios.get(
           `https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${API_KEY}&pageSize=15`
         );
-        setNews(response.data.articles);
+        const filteredNews = response.data.articles.filter(
+          (item) => item.urlToImage
+        );
+        setNews(filteredNews);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -26,39 +29,50 @@ const CryptoNews = () => {
 
   if (loading)
     return (
-      <p className="text-gray-900 dark:text-gray-200 text-3xl">
+      <p className="text-gray-900 dark:text-gray-200 text-center text-3xl">
         Loading news...
       </p>
     );
   if (error)
     return (
-      <p text-gray-900 dark:text-gray-200>
+      <p className="text-gray-900 dark:text-gray-200 text-center text-3xl">
         Error loading news: {error}
       </p>
     );
 
   return (
-    <div className="bg-gray-200 dark:bg-gray-800 p-6 sm:m-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
+    <div className="bg-gray-200 dark:bg-gray-800 p-6 sm:m-6 rounded-lg shadow-lg max-w-2xl">
+      <h2 className="text-2xl font-bold text-gray-900 text-center dark:text-gray-200 mb-4">
         Latest Crypto News
       </h2>
-      <ul className="space-y-4">
+      <ul className="space-y-6">
         {news.map((item, index) => (
           <li
             key={index}
-            className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4"
+            className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden"
+            tabIndex="0"
           >
             <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-semibold text-gray-900 dark:text-gray-200"
+              className="block"
+              tabIndex="-1"
             >
-              {item.title}
+              <img
+                src={item.urlToImage}
+                alt={item.title}
+                className="w-full h-64 md:h-72 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-200 hover:underline">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  {item.description}
+                </p>
+              </div>
             </a>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-              {item.description}
-            </p>
           </li>
         ))}
       </ul>

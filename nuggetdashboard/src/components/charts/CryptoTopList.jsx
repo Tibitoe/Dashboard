@@ -4,10 +4,14 @@ const CryptoTopList = () => {
   const { data, loading, error } = useSelector((state) => state.crypto);
 
   if (loading)
-    return <p className="text-gray-900 dark:text-gray-200">Loading...</p>;
+    return (
+      <p className="text-gray-900 dark:text-gray-200 text-center text-3xl">
+        Loading...
+      </p>
+    );
   if (error)
     return (
-      <p className="text-gray-900 dark:text-gray-200">
+      <p className="text-gray-900 dark:text-gray-200 text-center text-3xl">
         Error loading toplist: {error}
       </p>
     );
