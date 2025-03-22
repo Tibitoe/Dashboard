@@ -21,11 +21,17 @@ const BitcoinPriceChart = () => {
     dispatch(fetchBitcoinHistory(selectedPeriod));
   }, [dispatch, selectedPeriod]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading)
+    return <p className="text-gray-900 dark:text-gray-200">Loading...</p>;
+  if (error)
+    return (
+      <p className="text-gray-900 dark:text-gray-200">
+        Error loading chart: {error}
+      </p>
+    );
 
   return (
-    <div className="bg-gray-200 dark:bg-gray-800 p-6 m-6 rounded-lg shadow-lg">
+    <div className="bg-gray-200 dark:bg-gray-800 p-6 sm:m-6 sm:rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200">
           Bitcoin Price History

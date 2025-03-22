@@ -24,11 +24,21 @@ const CryptoNews = () => {
     fetchNews();
   }, []);
 
-  if (loading) return <p>Loading news...</p>;
-  if (error) return <p>Error loading news: {error}</p>;
+  if (loading)
+    return (
+      <p className="text-gray-900 dark:text-gray-200 text-3xl">
+        Loading news...
+      </p>
+    );
+  if (error)
+    return (
+      <p text-gray-900 dark:text-gray-200>
+        Error loading news: {error}
+      </p>
+    );
 
   return (
-    <div className="bg-gray-200 dark:bg-gray-800 p-6 m-6 rounded-lg shadow-lg">
+    <div className="bg-gray-200 dark:bg-gray-800 p-6 sm:m-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
         Latest Crypto News
       </h2>

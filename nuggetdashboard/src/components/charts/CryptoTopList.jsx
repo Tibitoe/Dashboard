@@ -3,11 +3,17 @@ import { useSelector } from "react-redux";
 const CryptoTopList = () => {
   const { data, loading, error } = useSelector((state) => state.crypto);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading)
+    return <p className="text-gray-900 dark:text-gray-200">Loading...</p>;
+  if (error)
+    return (
+      <p className="text-gray-900 dark:text-gray-200">
+        Error loading toplist: {error}
+      </p>
+    );
 
   return (
-    <div className="bg-gray-200 dark:bg-gray-800 p-6 m-6 rounded-lg shadow-lg">
+    <div className="bg-gray-200 dark:bg-gray-800 p-6 mb-6 sm:rounded-lg shadow-lg max-w-2xl m-auto">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
         Top 10 Cryptocurrencies by Market Cap
       </h2>
